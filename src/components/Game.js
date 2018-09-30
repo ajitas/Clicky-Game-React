@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import friends from "../friends.json";
 import "./style.css";
+import Row from "./Row";
+import Col from "./Col";
 
 class Game extends React.Component {
     state = {
@@ -40,19 +42,19 @@ class Game extends React.Component {
     render(){
         return (
                 <div className={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "" ?"animated fadeInUp":""}`}>
-                    <div className="row game-heading">
-                        <div className="col-md-12 text-center">
+                    <Row cls="game-heading">
+                        <Col size="md-12">
                             <span className="game-name">CLICKY GAME</span><p> Click on an image to earn points, but don't click on any more than once!</p>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
                     <Header message={this.state.message} score={this.state.score} highscore={this.state.highscore} />
-                    <div className="row game-area">
-                        <div className="col-md-1"></div>
-                        <div className="col-md-10">
+                    <Row cls="game-area">
+                        <Col size="md-1"></Col>
+                        <Col size="md-10">
                             {this.state.pictures.map((pic => <img key={pic.id} alt={pic.name} src={pic.image} onClick={()=>this.handleClick(pic.id)}/>))}
-                        </div>
-                        <div className="col-md-1"></div>
-                    </div>
+                        </Col>
+                        <Col size="md-1"></Col>
+                    </Row>
                 </div>
         );
     }
