@@ -4,6 +4,9 @@ import friends from "../friends.json";
 import "./style.css";
 import Row from "./Row";
 import Col from "./Col";
+import Container from "./Container";
+import Span from "./Span";
+import Paragraph from "./Paragraph";
 
 class Game extends React.Component {
     state = {
@@ -41,10 +44,11 @@ class Game extends React.Component {
 
     render(){
         return (
-                <div className={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "" ?"animated fadeInUp":""}`}>
+                <Container cls={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "" ?"animated fadeInUp":""}`}>
                     <Row cls="game-heading">
                         <Col size="md-12">
-                            <span className="game-name">CLICKY GAME</span><p> Click on an image to earn points, but don't click on any more than once!</p>
+                            <Span cls="game-name">CLICKY GAME</Span>
+                            <Paragraph> Click on an image to earn points, but don't click on any more than once!</Paragraph>
                         </Col>
                     </Row>
                     <Header message={this.state.message} score={this.state.score} highscore={this.state.highscore} />
@@ -55,7 +59,7 @@ class Game extends React.Component {
                         </Col>
                         <Col size="md-1"></Col>
                     </Row>
-                </div>
+                </Container>
         );
     }
 

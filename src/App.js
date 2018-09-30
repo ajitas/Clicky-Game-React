@@ -2,9 +2,7 @@ import React from "react";
 import Container from "./components/Container";
 import Game from "./components/Game";
 
-const App = () => (<Container>
-                      <Game/>
-                  </Container>
+const App = () => (<Game/>
 );
 
 export default App;
