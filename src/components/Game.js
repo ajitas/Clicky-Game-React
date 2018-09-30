@@ -40,7 +40,11 @@ class Game extends React.Component {
     render(){
         return (
                 <div className={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "" ?"animated fadeInUp":""}`}>
-                    <div className="game-heading text-center"><span className="game-name">Clicky Game</span><p> Click on an image to earn points, but don't click on any more than once!</p></div>
+                    <div className="row game-heading">
+                        <div className="col-md-12 text-center">
+                            <span className="game-name">CLICKY GAME</span><p> Click on an image to earn points, but don't click on any more than once!</p>
+                        </div>
+                    </div>
                     <Header message={this.state.message} score={this.state.score} highscore={this.state.highscore} />
                     <div className="row game-area">
                         <div className="col-md-1"></div>
