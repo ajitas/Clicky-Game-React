@@ -26,6 +26,14 @@ class Game extends React.Component {
         const len= this.state.alreadyPicked.filter(idOfImage => idOfImage === id).length;
         const newPictures = this.shuffle(this.state.pictures);
         const newMessage= (len===0)?"Guessed Correctly":"Guessed Incorrectly";
+        const that = this;
+        (function() {
+            if(newMessage === "Guessed Incorrectly"){
+                setTimeout(()=> {
+                    that.setState({message:"Click to start again!"});
+                }, 1000);
+            }
+        }());
         const newScore = (len===0)?this.state.score+1:0;
         const newAlreadyPicked = (len===0)?this.state.alreadyPicked.concat(id):[];
         const newHighScore = (len===0)?(this.state.highscore<newScore)?newScore:this.state.highscore:this.state.highscore;

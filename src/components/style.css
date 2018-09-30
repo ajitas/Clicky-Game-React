@@ -31,8 +31,7 @@ img:hover {
 .game-name{
     font-size:70px;
     font-weight:bold;
-    color:black;
-    text-shadow:0px 0px 20px rgb(192, 242, 242);
+    color: rgb(192, 242, 242);
     font-family: 'Permanent Marker', cursive;
 }
 .scoreboard{
@@ -41,8 +40,14 @@ img:hover {
 }
 
 p{
-    color:rgb(208, 203, 203);
+    color:white;
     font-size:20px;
+}
+
+.container{
+    background:url("https://www.planwallpaper.com/static/images/1871596.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width: 1199px){
