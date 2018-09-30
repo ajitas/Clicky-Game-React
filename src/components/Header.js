@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
 import Row from "./Row";
 import Col from "./Col";
+import "./style.css";
 
 const Header = props => (
     <Row cls="score">

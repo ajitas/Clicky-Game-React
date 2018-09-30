@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import friends from "../friends.json";
-import "./style.css";
 import Row from "./Row";
 import Col from "./Col";
 import Container from "./Container";
 import Span from "./Span";
 import Paragraph from "./Paragraph";
+import friends from "../friends.json";
+import "./style.css";
 
 class Game extends React.Component {
     state = {
@@ -20,7 +20,7 @@ class Game extends React.Component {
     componentDidMount() {
         const newPictures = this.shuffle(this.state.pictures);
         this.setState({pictures:newPictures});
-      }
+    }
 
     handleClick = id => {
         const len= this.state.alreadyPicked.filter(idOfImage => idOfImage === id).length;
@@ -62,6 +62,5 @@ class Game extends React.Component {
                 </Container>
         );
     }
-
 }
 export default Game;

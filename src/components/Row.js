@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Row = props => (
     <div className={`row ${props.cls}`}>
