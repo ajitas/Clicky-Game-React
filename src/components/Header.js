@@ -2,9 +2,9 @@ import React from "react";
 import "./style.css";
 
 const Header = props => (
-    <div className="row header">
+    <div className="row score">
         <div className="col-md-4 text-center">
-             Clicky Game
+             <span className="scoreboard">ScoreBoard</span>
         </div>
         <div className="col-md-4 text-center">
             {props.message}
