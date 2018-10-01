@@ -27,7 +27,7 @@ class Game extends React.Component {
         const len= this.state.alreadyPicked.filter(idOfImage => idOfImage === id).length;
         const newAlreadyPicked = (len===0)?this.state.alreadyPicked.concat(id):[];
         const newScore = (len===0)?this.state.score+1:0;
-        if(newScore<12){
+        if(newScore<this.state.allPictures.length){
             this.setState({alreadyPicked:newAlreadyPicked},
                 () => { 
                     let that = this;
@@ -56,7 +56,7 @@ class Game extends React.Component {
         }
         else {
             const that = this;
-            that.setState({message:"You won!Game resetting..",score:12, highscore:12 });
+            that.setState({message:"You won!Game resetting..",score:that.state.score+1, highscore:that.state.highscore+1 });
             (function() {
                 setTimeout(()=> {
                     that.setState({message:"Click to Start!",score:0,allPictures:friends,alreadyPicked :[]},

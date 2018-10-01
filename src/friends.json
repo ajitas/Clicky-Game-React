@@ -58,5 +58,25 @@
     "id": 12,
     "name": "Jerry",
     "image": "http://pngimg.com/uploads/tom_and_jerry/tom_and_jerry_PNG53.png"
+  },
+  {
+    "id": 13,
+    "name": "Pinocchio",
+    "image": "https://vignette.wikia.nocookie.net/disneyfanon/images/d/dc/Pinocchio-8.png/revision/latest?cb=20140929155209"
+  },
+  {
+    "id": 14,
+    "name": "ChipnDale",
+    "image": "https://www.disneyclips.com/imagesnewb3/images/nv13.gif"
+  },
+  {
+    "id": 15,
+    "name": "Pumba",
+    "image": "https://www.disneyclips.com/imagesnewb/images/pumbaa3.png"
+  },
+  {
+    "id": 16,
+    "name": "Aladdin",
+    "image": "https://i.pinimg.com/originals/58/dc/7e/58dc7e05a4e15a5b5fa91e231afdfa9c.png"
   }
 ]
