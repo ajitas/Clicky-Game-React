@@ -14,7 +14,7 @@ class Game extends React.Component {
         pictures:friends.slice(0,8),
         score:0,
         highscore:0,
-        message:"",
+        message:"Click to Start!",
         alreadyPicked :[]
     }
 
@@ -29,8 +29,7 @@ class Game extends React.Component {
         const newScore = (len===0)?this.state.score+1:0;
         if(newScore<12){
             this.setState({alreadyPicked:newAlreadyPicked},
-                () => 
-                { 
+                () => { 
                     let that = this;
                     (function loop(){
                         let newPictures = that.shuffle(that.state.allPictures); 
@@ -60,12 +59,13 @@ class Game extends React.Component {
             that.setState({message:"You won!Game resetting..",score:12, highscore:12 });
             (function() {
                 setTimeout(()=> {
-                    that.setState({message:"",score:0,allPictures:friends,alreadyPicked :[]},
-                    ()=>{
-                        const newPictures = that.shuffle(that.state.allPictures);
-                        that.setState({pictures:newPictures});
-                    });
-                }, 1500);   
+                    that.setState({message:"Click to Start!",score:0,allPictures:friends,alreadyPicked :[]},
+                        ()=>{
+                            const newPictures = that.shuffle(that.state.allPictures);
+                            that.setState({pictures:newPictures});
+                        }
+                    );
+                }, 2000);   
             }());
         }
     }
@@ -88,7 +88,7 @@ class Game extends React.Component {
 
     render(){
         return (
-                <Container cls={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "" ?"animated fadeInUp": this.state.message ==="You won!Game resetting.."?"animated flash":""}`}>
+                <Container cls={`${this.state.message === "Guessed Incorrectly" ? "animated shake" : this.state.message === "Click to Start!" ?"animated fadeInUp": this.state.message ==="You won!Game resetting.."?"animated flash":""}`}>
                     <Row cls="game-heading">
                         <Col size="md-12">
                             <Span cls="game-name">CLICKY GAME</Span>
