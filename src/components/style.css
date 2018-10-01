@@ -3,7 +3,7 @@ img {
     height:200px;
     margin:15px;
     box-shadow:0px 0px 5px black;
-    background:rgb(192, 242, 242)
+    
 }
 img:hover {
     transform: scale(1.2);
