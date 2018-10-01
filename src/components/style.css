@@ -28,12 +28,12 @@ img:hover {
 .score, .game-heading{
     font-family: 'Courgette', cursive;
 }
-.game-name{
+/* .game-name{
     font-size:70px;
     font-weight:bold;
     color: rgb(192, 242, 242);
     font-family: 'Permanent Marker', cursive;
-}
+} */
 .scoreboard{
     text-decoration: underline;
     font-size:25px;
@@ -48,6 +48,15 @@ p{
     background:url("https://www.planwallpaper.com/static/images/1871596.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+span { 
+    background: url("https://d9np3dj86nsu2.cloudfront.net/image/f7347bbd9323fc01ee80d11c76ab6270") -20px -20px repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display:block;
+    font-size:70px;
+    font-weight:bold;
+    font-family: 'Permanent Marker', cursive;
 }
 
 @media screen and (max-width: 1199px){
