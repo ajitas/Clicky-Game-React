@@ -35,12 +35,11 @@ img:hover {
     font-family: 'Permanent Marker', cursive;
 } */
 .scoreboard{
-    text-decoration: underline;
     font-size:25px;
 }
 
 p{
-    color:white;
+    color:yellow;
     font-size:20px;
 }
 
@@ -49,7 +48,16 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
-span { 
+span{ 
+    background: url("https://d9np3dj86nsu2.cloudfront.net/image/f7347bbd9323fc01ee80d11c76ab6270") -20px -20px repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display:block;
+    font-size:25px;
+    font-weight:bold;
+    font-family: 'Permanent Marker', cursive;
+}
+span.game-name { 
     background: url("https://d9np3dj86nsu2.cloudfront.net/image/f7347bbd9323fc01ee80d11c76ab6270") -20px -20px repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

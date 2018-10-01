@@ -1,18 +1,19 @@
 import React from "react";
 import Row from "./Row";
 import Col from "./Col";
+import Span from "./Span";
 import "./style.css";
 
 const Header = props => (
     <Row cls="score">
         <Col size="md-4">
-             <span className="scoreboard">ScoreBoard</span>
+             <Span className="scoreboard">ScoreBoard</Span>
         </Col>
         <Col size="md-4">
-            {props.message}
+            <Span>{props.message}</Span>
         </Col>
         <Col size="md-4">
-            Score:{props.score} | Top Score:{props.highscore}
+            <Span>Score: {props.score} | Top Score: {props.highscore}</Span>
         </Col>
     </Row>
   );
